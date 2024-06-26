@@ -1,5 +1,9 @@
 # ChatGPT Writer Take-Home Coding Assignment
 
+## DEMO VIDEO
+
+[![Watch the video](https://i3.ytimg.com/vi/3_hQpuE0-IU/maxresdefault.jpg)](https://youtu.be/3_hQpuE0-IU)
+
 This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with command: `pnpm create plasmo --with-tailwindcss`.
 
 ## Getting Started
@@ -33,7 +37,3 @@ npm run build
 ```
 
 This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## DEMO VIDEO
-
-[![Watch the video](https://i3.ytimg.com/vi/3_hQpuE0-IU/maxresdefault.jpg)](https://youtu.be/3_hQpuE0-IU)
