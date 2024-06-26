@@ -29,15 +29,28 @@ const IconBtnInline = () => {
       "div.msg-form__msg-content-container--scrollable > div > div.msg-form__contenteditable"
     )
 
+    const openModal = () => setFocused(true)
+
     // clicked anywhere outside the input
-    const handleClick = () => {
-      setFocused(input.contains(document.activeElement))
+    const handleClickOutside = () => {
+      if (
+        document.activeElement !== input &&
+        document.activeElement !== input.querySelector("*")
+      ) {
+        setFocused(false)
+      }
     }
 
-    document.addEventListener("click", handleClick)
+    if (input) {
+      input.addEventListener("focus", openModal)
+      document.addEventListener("click", handleClickOutside)
+    }
 
     return () => {
-      document.removeEventListener("click", handleClick)
+      if (input) {
+        input.removeEventListener("focus", openModal)
+        document.removeEventListener("click", handleClickOutside)
+      }
     }
   }, [])
 
@@ -50,8 +63,8 @@ const IconBtnInline = () => {
   return (
     <img
       src={editIcon}
-      alt="Generate Icon"
-      className="absolute right-2 bottom-2 cursor-pointer hover:scale-105 active:scale-95 transition-all"
+      alt="Edit Icon"
+      className="absolute right-2 bottom-2 cursor-pointer hover:scale-105 active:scale-95"
       onClick={toggleModal}
     />
   )
