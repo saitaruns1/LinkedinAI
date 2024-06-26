@@ -37,7 +37,3 @@ This should create a production bundle for your extension, ready to be zipped an
 ## DEMO VIDEO
 
 [![Watch the video](https://i3.ytimg.com/vi/3_hQpuE0-IU/maxresdefault.jpg)](https://youtu.be/3_hQpuE0-IU)
-
-<video width="320" height="240" controls>
-  <source src="ChatGptWriter.mp4" type="video/mp4">
-</video>
